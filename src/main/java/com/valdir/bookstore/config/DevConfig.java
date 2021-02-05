@@ -1,4 +1,4 @@
-package com.brendon.bookstore.config;
+package com.valdir.bookstore.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
-import com.brendon.bookstore.services.DBService;
+import com.valdir.bookstore.service.DBService;
 
 @Configuration
 @Profile("dev")
@@ -22,7 +22,7 @@ public class DevConfig {
 	public boolean instanciaBaseDeDados() {
 		if(strategy.equals("create")) {
 			this.dbService.instanciaBaseDeDados();
-		}		
+		}
 		return false;
 	}
 }
